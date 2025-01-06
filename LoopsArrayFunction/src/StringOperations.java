@@ -16,7 +16,25 @@ public class StringOperations {
 		
 		if(str1.equals(str2)) {
 			System.out.println("Both are equals");
+		}else{
+			System.out.println("Both are not equals");
 		}
+		
+		str1 = str1.substring(1,15); // using substring to print specific character
+		System.out.println(str1);
+		
+		
+		int str3 = str1.indexOf("fine"); // indexOf to print index of any word
+		System.out.println(str3);
+		
+		System.out.println(str1.substring(str3));
+		
+		String s = str1.replace("fine", "good");
+		System.out.println(str1);
+		
+		s = str1.replaceAll(" ", "_");
+		System.out.println(s);
+		
 	}
 	
 
