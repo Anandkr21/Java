@@ -34,6 +34,15 @@ public class StringOperations {
 		
 		s = str1.replaceAll(" ", "_");
 		System.out.println(s);
+
+
+		int age = 45;
+		
+		if(age>=18) {
+			System.out.println("You are eligible to vote");
+		}else {
+			System.out.println("You are not eligible to vote.");
+		}
 		
 	}
 	
