@@ -43,6 +43,29 @@ public class StringOperations {
 		}else {
 			System.out.println("You are not eligible to vote.");
 		}
+
+
+
+		
+		// string concatenation
+		String newStr = "            Hello all of you, how are you all           .";
+		// trim function will trim only leading and trailing spaces
+		String trimStr = newStr.trim();
+		
+		// replaceAll function used to remove space from middle
+		System.out.println(trimStr.replaceAll("\\s+", " "));
+		
+		
+		
+		
+		// compare two string
+		String x = "userName";
+		String y = "UserName";
+		
+		// checking strictly
+		System.out.println(x.equals(y));
+		// ignoring case upper lower
+		System.out.println(x.equalsIgnoreCase(y));
 		
 	}
 	
