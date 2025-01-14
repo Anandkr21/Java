@@ -34,8 +34,8 @@ public class StringOperations {
 		
 		s = str1.replaceAll(" ", "_");
 		System.out.println(s);
-
-
+		
+		// simple if else statement
 		int age = 45;
 		
 		if(age>=18) {
@@ -43,9 +43,6 @@ public class StringOperations {
 		}else {
 			System.out.println("You are not eligible to vote.");
 		}
-
-
-
 		
 		// string concatenation
 		String newStr = "            Hello all of you, how are you all           .";
