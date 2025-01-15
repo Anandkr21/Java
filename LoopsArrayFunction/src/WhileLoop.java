@@ -9,13 +9,12 @@ public class WhileLoop {
 			System.out.println(i);
 			if(i==95) {
 				break;
-				i--;
 			}
 			boolean friendListLoad = false;
 			while(!friendListLoad) {
 				// load
 				// check
-				if(loaded) {
+				if(true) {
 					friendListLoad = true;
 				}
 			}

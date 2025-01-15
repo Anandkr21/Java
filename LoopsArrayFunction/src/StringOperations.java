@@ -64,6 +64,13 @@ public class StringOperations {
 		// ignoring case upper lower
 		System.out.println(x.equalsIgnoreCase(y));
 		
+		String transactionString = "Your order is processing";
+		String result[] = transactionString.split(" ");
+		
+		System.out.println(result.length);
+		System.out.println(result[0]);
+		System.out.println(result[1]);
+		
 	}
 	
 
