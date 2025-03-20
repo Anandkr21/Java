@@ -44,6 +44,13 @@ public class Client {
 		fb2.increasePageViews(200);
 		fb1.printPageDetails();
 		fb2.printPageDetails();
+		
+		
+		FacebookPage fb3 = null;
+		System.out.println(fb3.name);
+		fb3 = new FacebookPage();
+		fb3.name = "Setting Page";
+		
 	}
 
 }

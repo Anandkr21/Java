@@ -15,8 +15,10 @@ public class FacebookPage {
 		System.out.println(i);
 	}
 	
-	public static void printCompanyDetails() {
+	public static void printCompanyDetails() {		
 		System.out.println(owner + ". Founded in 2005");
+//		System.out.println(name);// static function cannot access non static stuff
+//		printPageDetails();
 		
 		int i=100; // local variable
 		System.out.println(i);
