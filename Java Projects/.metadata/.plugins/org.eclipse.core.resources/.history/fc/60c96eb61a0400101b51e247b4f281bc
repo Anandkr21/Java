@@ -1,0 +1,12 @@
+
+public class numbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		byte myNum = 200;
+		System.out.println(myNum);
+
+	}
+
+}

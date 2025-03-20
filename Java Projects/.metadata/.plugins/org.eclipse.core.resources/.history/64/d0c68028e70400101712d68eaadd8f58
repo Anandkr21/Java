@@ -1,0 +1,18 @@
+
+public class Method1 {
+	
+	static void myMethod(String fname, int age) {
+		
+		System.out.println(fname+ " Refsnes");
+		System.out.println(fname + " is" + age);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		myMethod("Liam", 8); // Liam Refsnes
+		myMethod("Jenny", 7); // Jenny Refsnes
+		myMethod("Anja", 6); // Anja Refsnes
+	}
+
+}
