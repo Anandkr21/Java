@@ -1,0 +1,57 @@
+package Selenium04;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class XpathDemo {
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.nopcommerce.com");
+		Thread.sleep(2000);
+		
+//		xpath with single attribute
+		WebElement txt1 = driver.findElement(By.xpath("//input[@aria-label = 'Search store']"));
+		txt1.sendKeys("washing machine");
+		Thread.sleep(2000);
+		txt1.clear();
+
+		
+//		we can use multiple xpath value for the same target, for better achievement
+//		xpath with multiple attribute
+		WebElement txt2 = driver.findElement(By.xpath("//input[@aria-label = 'Search store'][@autocomplete = 'off']"));
+		txt2.sendKeys("mobile");
+		Thread.sleep(2000);
+		txt2.clear();
+		
+		
+//		xpath with "AND" & "OR"  operator
+		WebElement txt3 = driver.findElement(By.xpath("//input[@aria-label='Search store' or @autocomplte = 'off']"));
+		WebElement txt4 = driver.findElement(By.xpath("//input[@aria-label='Search store' and @autocomplete = 'off']"));
+		txt3.sendKeys("phone");
+		Thread.sleep(2000);
+		txt3.clear();
+		
+		
+//		driver.findElement(By.xpath("//a[text()='Electronics ']")).click();	
+		
+//		Either we can use * to get any text or can use tag name
+		String txt = driver.findElement(By.xpath("//h2[text()='Welcome to our store']")).getText();
+		System.out.println(txt);
+		Thread.sleep(2000);
+		
+		
+//		xpath with contain
+		driver.findElement(By.xpath("//input[contains(@placeholder, 'Search store')]")).sendKeys("Air conditioner");
+		
+		
+		
+		Thread.sleep(3000);
+		driver.quit();
+		
+	}
+
+}

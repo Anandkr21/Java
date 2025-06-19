@@ -1,0 +1,26 @@
+package Selenium04;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class XpathDemo {
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.nopcommerce.com");
+		Thread.sleep(2000);
+		
+		WebElement txt1 = driver.findElement(By.xpath("//input[aria-label = 'search store']"));
+		txt1.sendKeys("mobile");
+		Thread.sleep(2000);
+		txt1.clear();
+		
+				
+		
+		
+	}
+
+}

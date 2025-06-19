@@ -1,0 +1,38 @@
+package Selenium04;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class XpathDemo {
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.nopcommerce.com");
+		Thread.sleep(2000);
+		
+//		xpath with single attribute
+		WebElement txt1 = driver.findElement(By.xpath("//input[@aria-label = 'Search store']"));
+		txt1.sendKeys("washing machine");
+		Thread.sleep(2000);
+		txt1.clear();
+
+		
+//		we can use multiple xpath value for the same target, for better achievement
+//		xpath with multiple attribute
+		WebElement txt2 = driver.findElement(By.xpath("//input[@aria-label = 'Search store'][@autocomplete = 'off']"));
+		txt2.sendKeys("mobile");
+		Thread.sleep(2000);
+		txt2.clear();
+		
+				
+		WebElement userTxt = driver.findElement(By.xpath("//input[@aria-label='search stre' or @autocomplte = 'off']"));
+		userTxt.sendKeys("phone");
+		Thread.sleep(2000);
+		userTxt.clear();
+		
+	}
+
+}

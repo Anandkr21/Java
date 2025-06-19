@@ -1,0 +1,33 @@
+package Selenium03;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CSSselector {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.opencart.com.gr/");
+		Thread.sleep(2000);
+		
+		// CSS selector
+		// ia
+		
+		
+		// tag id
+		//driver.findElement(By.cssSelector("form#form-currency")).click();
+		driver.findElement(By.cssSelector("#form-currency")).click();
+		
+		// tag classname
+//		driver.findElement(By.cssSelector("input.form-control")).sendKeys("hello");
+		driver.findElement(By.cssSelector(".form-control")).sendKeys("hello");
+		
+//		driver.quit();
+		
+		
+	}
+
+}

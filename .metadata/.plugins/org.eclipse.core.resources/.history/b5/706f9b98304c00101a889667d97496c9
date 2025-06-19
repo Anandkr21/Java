@@ -1,0 +1,43 @@
+package Selenium02;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Locators {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.nopcommerce.com/");
+		
+		// id
+		WebElement txtbox = driver.findElement(By.id("small-searchterms"));
+		txtbox.sendKeys("washing machine");
+		Thread.sleep(2000);
+		txtbox.clear();
+		Thread.sleep(2000);
+		
+		// name
+		By name = By.name("q");
+		driver.findElement(name).sendKeys("mobile");
+		Thread.sleep(3000);
+		
+		// linktext
+//		driver.findElement(By.linkText("Digital downloads")).click();
+//		Thread.sleep(2000);
+		
+		// partial linktext
+		driver.findElement(By.partialLinkText("gital loads"));
+		Thread.sleep(3000);
+		
+		
+//		Thread.sleep(2000);
+//		driver.quit();
+		
+	}
+
+}

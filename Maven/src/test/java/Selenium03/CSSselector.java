@@ -1,0 +1,58 @@
+package Selenium03;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CSSselector {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.opencart.com.gr/");
+		Thread.sleep(2000);
+		
+//		 CSS Selector
+//		---------------------------------------------------
+//		tag id					=>	tag#id
+//		tag class				=>	tag.className
+//		tag attribute			=>	tag[attribute='value']
+//		tag class attribute		=>	tag.class[attribute='value']
+		
+		
+		// tag id
+		//driver.findElement(By.cssSelector("form#form-currency")).click();    // tag idName
+		driver.findElement(By.cssSelector("#form-currency")).click();			// idName
+		Thread.sleep(2000);
+		
+		// tag classname
+//		driver.findElement(By.cssSelector("input.form-control")).sendKeys("hello");   // tag classname
+		WebElement txt = driver.findElement(By.cssSelector(".form-control"));    // className
+		txt.sendKeys("washing machine");
+		Thread.sleep(2000);
+		txt.clear();
+		
+//		tag attribute 
+//		WebElement txt1 = driver.findElement(By.cssSelector("input[name='search']"));  // tagName attribute
+		WebElement txt1 = driver.findElement(By.cssSelector("[name = 'search']"));		// attribute
+		txt1.sendKeys("mobile");
+		Thread.sleep(2000);
+		txt1.clear();
+		
+//		tag class attribute
+//		WebElement txt2 = driver.findElement(By.cssSelector("input.form-control[placeholder='Search']"));  //tagName class attribute 
+		WebElement txt2 = driver.findElement(By.cssSelector(".form-control[placeholder='Search']"));		// class attribute
+		txt2.sendKeys("air conditioner");
+		Thread.sleep(2000);
+		txt2.clear();
+//		
+		
+		Thread.sleep(5000);
+		driver.quit();
+		
+		
+	}
+
+}
